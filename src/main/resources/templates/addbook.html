@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>Add Book</title>
+</head>
+<body>
+<form action="#" th:action="@{/additem}" th:object="${addbook}" method="post">
+    <p>SKU: <input type="number" th:field="*{sku}"/></p>
+    <p>Title: <input type="text" th:field="*{title}"/></p>
+        <!--<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Problem with "name"</span></p>-->
+    <p>Author/s: <input type="text" th:field="*{author}"/></p>
+        <!--<span th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Problem with "id"</span></p>-->
+    <p>Price: <input type="number" th:field="*{price}"/></p>
+        <!--<span th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Problem with "price"</span></p>-->
+<p>Description: <input type="text" th:field="*{description}"/></p>
+        <!--<span th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Problem with "description"</span></p>-->
+    <p><input type="submit" value="Submit" /><input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
